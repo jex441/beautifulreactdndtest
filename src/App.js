@@ -2,6 +2,7 @@ import logo from "./logo.svg";
 import "./App.css";
 import { DragDropContext, Droppable, Draggable } from "react-beautiful-dnd";
 import { useState } from "react";
+import liberty from "./liberty.jpeg";
 
 const trips = [
   {
@@ -10,7 +11,7 @@ const trips = [
     location: "Liberty Island, New York, NY",
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
-    imageUrl: "../public/liberty.jpeg",
+    imageUrl: liberty,
   },
   {
     id: 222,
@@ -18,7 +19,8 @@ const trips = [
     location: "5 Museum Mile, New York, NY",
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
-    imageUrl: "../public/liberty.jpeg",
+    imageUrl:
+      "http://www.metmuseum.org/-/media/images/visit/met-fifth-avenue/fifthave_teaser.jpg?sc_lang=en",
   },
   {
     id: 223,
@@ -26,7 +28,8 @@ const trips = [
     location: "Liberty Island, New York, NY",
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
-    imageUrl: "../public/liberty.jpeg",
+    imageUrl:
+      "https://www.nydailynews.com/resizer/EsyO7of502AOt3lM9wrqf4NCYOk=/1200x0/top/arc-anglerfish-arc2-prod-tronc.s3.amazonaws.com/public/SUNBWE47ACEVH67NCDESD2RHJ4.jpg",
   },
   {
     id: 224,
@@ -34,7 +37,8 @@ const trips = [
     location: "5 Evans Street, New York, NY",
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
-    imageUrl: "../public/liberty.jpeg",
+    imageUrl:
+      "https://infatuation.imgix.net/media/images/reviews/lucali/TeddyWolff.Lucali.Interiors.16.jpg?auto=format&w=256",
   },
 ];
 
@@ -70,12 +74,11 @@ function App() {
                       >
                         <div>
                           <img
+                            src={trip.imageUrl}
                             width="80px"
                             height="80px"
                             className="thumbnail"
-                            src={
-                              "https://media.architecturaldigest.com/photos/60ca1fa6699108e24d2f0e0d/3:4/w_1808,h_2411,c_limit/GettyImages-976208412.jpg"
-                            }
+                            alt="tripPhoto"
                           />
                         </div>
                         <div>
