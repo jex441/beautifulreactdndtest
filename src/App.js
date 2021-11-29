@@ -68,18 +68,21 @@ function App() {
                         {...provided.dragHandleProps}
                         ref={provided.innerRef}
                       >
-                        <img
-                          width="80px"
-                          height="80px"
-                          className="thumbnail"
-                          src={
-                            "https://media.architecturaldigest.com/photos/60ca1fa6699108e24d2f0e0d/3:4/w_1808,h_2411,c_limit/GettyImages-976208412.jpg"
-                          }
-                        />
-
-                        <h2>{trip.name}</h2>
-                        <h4>{trip.location}</h4>
-                        <h5>{trip.description}</h5>
+                        <div>
+                          <img
+                            width="80px"
+                            height="80px"
+                            className="thumbnail"
+                            src={
+                              "https://media.architecturaldigest.com/photos/60ca1fa6699108e24d2f0e0d/3:4/w_1808,h_2411,c_limit/GettyImages-976208412.jpg"
+                            }
+                          />
+                        </div>
+                        <div>
+                          <h5>{trip.name}</h5>
+                          <h5>{trip.location}</h5>
+                          <h5>{trip.description}</h5>
+                        </div>
                       </li>
                     )}
                   </Draggable>
