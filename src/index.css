@@ -22,8 +22,13 @@ li {
   align-items: center;
   max-width: 50%;
   background-color: #fff;
+  border: 0.5px solid #ccc;
+  margin: 1rem;
+  filter: drop-shadow(0 0.4rem 0.2rem rgb(230, 229, 229));
 }
 
 li img {
-  padding: 2rem;
+  padding: 0 2rem 0 0;
+  height: 205px;
+  width: 120px;
 }
